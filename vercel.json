@@ -20,14 +20,18 @@
         "runtime": "edge"
       }
     },
-    "errorPages": [
+    "rewrites": [
       {
-        "src": "/404.html",
-        "status": 404
+        "source": "/404",
+        "destination": "/404.html"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/404"
       }
     ],
     "images": {
-      "domains": ["example.com"],
+      "domains": ["your-domain.com"],
       "sizes": [64, 300, 1024]
     }
   }
