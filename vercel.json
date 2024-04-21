@@ -13,7 +13,7 @@
     ],
     "functions": {
       "api/test.js": {
-        "memory": 3009,
+        "memory": 1024,
         "maxDuration": 10
       },
       "api/edge-function.js": {
