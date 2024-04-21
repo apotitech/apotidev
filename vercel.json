@@ -11,15 +11,6 @@
         ]
       }
     ],
-    "functions": {
-      "api/test.js": {
-        "memory": 1024,
-        "maxDuration": 10
-      },
-      "api/edge-function.js": {
-        "runtime": "edge"
-      }
-    },
     "rewrites": [
       {
         "source": "/404",
