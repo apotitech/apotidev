@@ -10105,3 +10105,57 @@
 	 background: #2f3753;
  }
  
+/* Main Styles for WhatsApp Button */
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366; /* WhatsApp green */
+    color: #FFF; /* Ensures text and icons inside are white */
+    border-radius: 50px;
+    text-align: center;
+    line-height: 60px; /* Centers the icon vertically */
+    font-size: 30px; /* Icon size */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid #fff; /* Optional: adds a white border */
+    z-index: 100;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effects */
+.whatsapp_float:hover {
+    background-color: #34af77; /* Lighter green on hover */
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+/* Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.whatsapp_float {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Adjustments for Mobile */
+@media screen and (max-width: 767px) {
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        left: 10px;
+        font-size: 22px; /* Adjust icon size for smaller button */
+        line-height: 40px; /* Adjust line height to vertically center the icon */
+    }
+}
+
+/* Reduce Motion for Users Who Prefer It */
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp_float {
+        animation: none;
+    }
+}
